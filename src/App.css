@@ -1,8 +1,15 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
   text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -37,6 +44,75 @@
   padding: 2em;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("assets/images/Gemini_Generated_Walpaper.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.valentines-bg {
+  background-image: url("assets/images/Canva_Valentines_Background.png");
+  transition: background-image 3s ease-in-out;
+}
+
+#onlyChoiceButton {
+}
+
 .read-the-docs {
   color: #888;
+}
+
+.request-card {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  height: 50vh;
+  width: 50vw;
+  opacity: 0.95;
+}
+.request-card-hidden {
+  display: none;
+}
+
+#runningButton {
+  position: absolute; /* Allows JavaScript to control position */
+  left: 50%;
+  top: 50%;
+  transition: all 0.3s ease; /* Smooths the movement */
+  padding: 10px 20px;
+}
+
+.popup {
+  height: 55vh;
+  width: 50vw;
+  background-image: url("assets/images/Gemini_Generated_Stitch.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  visibility: hidden;
+  transition:
+    transform 0.3s ease,
+    top 0.3s ease;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.player {
+  bottom: 0;
+  position: absolute;
 }
