@@ -44,6 +44,32 @@
   padding: 2em;
 }
 
+/* Updated intro_container with proper positioning and fade transition */
+.intro_container {
+  position: fixed; /* Use fixed to cover everything */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: white; /* Changed to pure white */
+  z-index: 1000; /* Ensure it's on top */
+  transition:
+    opacity 1s ease-in-out,
+    visibility 1s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* When hidden, fade out */
+.intro_container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -115,4 +141,8 @@
 .player {
   bottom: 0;
   position: absolute;
+}
+
+.hidden {
+  display: none;
 }
