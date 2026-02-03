@@ -9,7 +9,6 @@ function App() {
   const [isOpenLetter, setOpenLetter] = useState(false);
   const [audioTrack, setAudioTrack] = useState(audioFile);
   const audioRef = useRef(null);
-
   const handleOpenPopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
@@ -21,9 +20,7 @@ function App() {
 
   // Handle play button click
   const handlePlayButton = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
+    audioRef.current.play();
     setOpenLetter(true); // This will hide the white overlay
   };
 
@@ -83,13 +80,7 @@ function App() {
           </button>
         </div>
         <figure className="player">
-          <audio
-            ref={audioRef}
-            id="myAudio"
-            controls
-            src={audioTrack}
-            loop
-          ></audio>
+          <audio ref={audioRef} controls src={audioTrack} autoPlay loop></audio>
         </figure>
       </div>
     </div>
