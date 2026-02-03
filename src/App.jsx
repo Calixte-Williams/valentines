@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import audioFile from "./assets/self_worth-450.mp3";
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -9,11 +10,10 @@ function App() {
     setIsPopupOpen(!isPopupOpen);
   };
 
-  const [audioTrack, setAudioTrack] = useState("public/self_worth-450.mp3");
-
+  const [audioTrack, setAudioTrack] = useState("assets/self_worth-450.mp3");
   const handleValentineYes = () => {
     setIsValentine(true);
-    setAudioTrack("public/goliath-jessie_reyez.mp3");
+    setAudioTrack("assets/goliath-jessie_reyez.mp3");
   };
 
   return (
@@ -39,7 +39,7 @@ function App() {
         </button>
       </div>
       <figure className="player">
-        <audio controls src={audioTrack} autoPlay loop></audio>
+        <audio controls src={audioFile} autoPlay loop></audio>
       </figure>
     </div>
   );
