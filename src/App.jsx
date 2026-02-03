@@ -9,13 +9,11 @@ function App() {
     setIsPopupOpen(!isPopupOpen);
   };
 
-  const [audioTrack, setAudioTrack] = useState(
-    "assets/audio/self_worth-450.mp3",
-  );
+  const [audioTrack, setAudioTrack] = useState("public/self_worth-450.mp3");
 
   const handleValentineYes = () => {
     setIsValentine(true);
-    setAudioTrack("assets/audio/goliath-jessie_reyez.mp3");
+    setAudioTrack("public/goliath-jessie_reyez.mp3");
   };
 
   return (
