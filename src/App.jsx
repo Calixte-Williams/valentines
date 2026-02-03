@@ -10,12 +10,12 @@ function App() {
   };
 
   const [audioTrack, setAudioTrack] = useState(
-    "/src/assets/audio/Self Worth - 450.mp3",
+    "assets/audio/self_worth-450.mp3",
   );
 
   const handleValentineYes = () => {
     setIsValentine(true);
-    setAudioTrack("/src/assets/audio/GOLIATH - Jessie Reyez.mp3");
+    setAudioTrack("assets/audio/goliath-jessie_reyez.mp3");
   };
 
   return (
