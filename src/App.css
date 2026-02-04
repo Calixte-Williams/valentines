@@ -97,6 +97,8 @@
   height: 50vh;
   width: 50vw;
   opacity: 0.95;
+
+  align-content: center;
 }
 .request-card-hidden {
   display: none;
@@ -106,7 +108,8 @@
   height: 55vh;
   width: 50vw;
   background-image: url("assets/images/Gemini_Generated_Stitch.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
   border-radius: 20px;
   position: absolute;
@@ -123,6 +126,7 @@
   border-color: white;
   border: 3px solid;
   transition: 2s ease;
+  background-color: white;
 }
 
 .open-popup {
